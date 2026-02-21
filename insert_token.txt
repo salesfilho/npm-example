@@ -1,0 +1,1 @@
+docker compose exec ctfd_db mysql -uctfd -pctfd_password_segura ctfd -N -e "INSERT IGNORE INTO tokens (type,user_id,value,expiration) VALUES ('user',1,'ctfd_import2026','2026-02-21 00:00:00');" && bash /tmp/import_challenges.sh http://localhost:8000 ctfd_import2026
