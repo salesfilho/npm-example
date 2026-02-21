@@ -1,4 +1,4 @@
-name: lb
+name: 'lb'
 
 services:
   proxy-manager:
