@@ -13,15 +13,7 @@
 # ══════════════════════════════════════════════════════════════
 
 CTFD_URL="${1:-http://localhost:8000}"
-TOKEN="${2}"
-
-if [ -z "$TOKEN" ]; then
-    echo "USO: bash import_challenges.sh URL TOKEN"
-    echo ""
-    echo "Para obter o token:"
-    echo "  Admin Panel → Settings → Access Tokens → Generate"
-    exit 1
-fi
+TOKEN="ctfd_f20e5925de4a8e5423d67f6dada1d489895461e0ae571fb1f05dfe50f17faee6"
 
 API="$CTFD_URL/api/v1"
 AUTH="Authorization: Token $TOKEN"
