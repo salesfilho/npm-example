@@ -4,7 +4,7 @@
 ╔══════════════════════════════════════════════════════════════════╗
 ║         SCRIPT DE INSTALAÇÃO CTFd + Docker no Ubuntu            ║
 ║                                                                  ║
-║  Autor:para Jaqueline Pereira da Silva                           ║
+║  Autor: Assistente Claude (para Jaqueline Pereira da Silva)      ║
 ║  Descrição: Automatiza a instalação completa do CTFd com         ║
 ║             Docker, Docker Compose e ferramentas adicionais      ║
 ║             para competições Capture The Flag (CTF).             ║
@@ -918,6 +918,8 @@ def print_summary():
 
 def main():
     """Função principal do instalador."""
+    global CTFD_PORT
+    
     parser = argparse.ArgumentParser(
         description="Instalador CTFd + Docker para Ubuntu",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -946,8 +948,6 @@ Exemplos:
     )
     
     args = parser.parse_args()
-    
-    global CTFD_PORT
     CTFD_PORT = args.port
     
     print_banner()
