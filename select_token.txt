@@ -1,0 +1,1 @@
+docker compose exec ctfd_db mysql -uctfd -pctfd_password_segura ctfd -N -e "SELECT * FROM tokens;" 
